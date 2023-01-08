@@ -1,20 +1,10 @@
-#!/bin/sh
+#!/bin/bash
 
-files=()
-#accessing last element
-#echo $total_files
-total_files=$(($# - 1))
+#for pattern in $@
+#do
+#true
+#done
 
-i=0
-while [ $i -lt $total_files ]
-do
-  files+=($1)
-  i=$(($i + 1))
-  shift
-done
+pattern=${*:-1:1}
 
-for var in files
-do
- echo $var
-done
-
+echo file pattern is $pattern
