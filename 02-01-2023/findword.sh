@@ -1,5 +1,12 @@
 #!/bin/sh
 
+if [ $# -lt 2 ];then
+echo "ERROR OCCURED"
+echo "Usage as follows"
+echo "sh filename.sh [file] [file].....[pattern]"
+exit 1
+fi
+
 for pattern in $@
 do
 true
